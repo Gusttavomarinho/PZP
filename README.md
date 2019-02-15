@@ -7,12 +7,3 @@ Sincronizado :)
 -------------------------------------------------------------------------------
 
 lista do repo com varios gitignore : https://github.com/github/gitignore
-
-
-
-
-fpogkfopgkopfkgkfpgkf
-f
-
-
-fogkfpkgpfkpgkopfkpkgpokfpokgfp
