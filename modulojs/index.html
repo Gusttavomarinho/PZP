@@ -7,9 +7,14 @@
 </head>
 <body>
 		Paginá html do curso de java script
-
+		<!-- testando o refresh e redirect basico no JS -->
 		<button onclick="window.location.href='http://google.com.br';">Ir para o Google</button>
 		<button onclick="window.location.href = window.location.href;">Atualizar Pagina</button>
+
+		<div id="area">Alguma coisa...</div><br/><br/>
+
+		<button onclick="document.getElementById('area').innerHTML = prompt('Qual o seu nome?');">Fazer a ação</button>
+		<button onclick="this.innerHTML = prompt('Qual o nome do botao?');">Botao ?</button>
 
 </body>
 </html>
