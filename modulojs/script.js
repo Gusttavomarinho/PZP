@@ -16,3 +16,13 @@ function fazerAcao(nome,idade){
 	area.innerHTML = nome+" "+texto+" Tem "+idade+" Anos ";
 }
 
+function addIngrediente() {
+	var ing = document.getElementById("ingrediente").value;
+
+	var listahtml = document.getElementById("lista").innerHTML;
+
+	listahtml = listahtml + "<li>"+ing+"</li>";
+
+	document.getElementById("lista").innerHTML = listahtml;
+}
+
