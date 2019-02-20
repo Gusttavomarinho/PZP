@@ -24,6 +24,8 @@ function addIngrediente() {
 	listahtml = listahtml + "<li>"+ing+"</li>";
 
 	document.getElementById("lista").innerHTML = listahtml;
+
+	console.log(listahtml)
 }
 
 function somar(){
