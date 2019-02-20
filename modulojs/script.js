@@ -26,3 +26,30 @@ function addIngrediente() {
 	document.getElementById("lista").innerHTML = listahtml;
 }
 
+function somar(){
+	var campo1 = parseFloat(document.getElementById("campo1").value);
+	var campo2 = parseFloat(document.getElementById("campo2").value);
+	var resultado = campo1 + campo2;
+	alert("O resultado da operação é: "+resultado);
+}
+
+function subtrair(){
+	var campo1 = parseFloat(document.getElementById("campo1").value);
+	var campo2 = parseFloat(document.getElementById("campo2").value);
+	var resultado = campo1 - campo2;
+	alert("O resultado da operação é: "+resultado);
+}
+
+function multiplicar(){
+	var campo1 = parseFloat(document.getElementById("campo1").value);
+	var campo2 = parseFloat(document.getElementById("campo2").value);
+	var resultado = campo1 * campo2;
+	alert("O resultado da operação é: "+resultado);
+}
+
+function dividir(){
+	var campo1 = parseFloat(document.getElementById("campo1").value);
+	var campo2 = parseFloat(document.getElementById("campo2").value);
+	var resultado = campo1 / campo2;
+	alert("O resultado da operação é: "+resultado);
+}
