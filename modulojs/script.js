@@ -28,6 +28,8 @@ function addIngrediente() {
 	console.log(listahtml)
 }
 
+
+//criando as funções tipo de uma miniclaculadora
 function somar(){
 	var campo1 = parseFloat(document.getElementById("campo1").value);
 	var campo2 = parseFloat(document.getElementById("campo2").value);
@@ -54,4 +56,17 @@ function dividir(){
 	var campo2 = parseFloat(document.getElementById("campo2").value);
 	var resultado = campo1 / campo2;
 	alert("O resultado da operação é: "+resultado);
+}
+
+//so testando como funciona o if no javascript
+function verificarNome(){
+	var nome = prompt("Qual seu nome?");
+
+	alert("Seu nome é:"+nome);
+
+	if(nome == "Gustavo"){
+		alert(nome+" "+",Este eo nome do criador do site")
+	}else{
+		alert("Seu nome e diferente do criador do site")
+	}
 }
