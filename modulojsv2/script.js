@@ -57,3 +57,5 @@ function carregou(){
 	document.getElementById('body').style.backgroundColor = 'grey';
 	alert("Pagina Carregada!");
 }
+
+//http://keycode.info/ -< site que mostra codigos das teclas
