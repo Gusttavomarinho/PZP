@@ -51,7 +51,7 @@ function apertouTecla(event){
 	}
 }
 
-//Trabalhando com eentos de pagina
+//Trabalhando com eventos de pagina
 
 function carregou(){
 	document.getElementById('body').style.backgroundColor = 'grey';
