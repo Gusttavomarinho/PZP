@@ -1,3 +1,4 @@
+//Trabalhando com eventos de mouse
 function apertouMouse() {
 	console.log("APERTOU O MOUSE AAAAE!");
 }
@@ -34,4 +35,18 @@ function cliqueDuplo(){
 
 function mudarCor(){
 	document.getElementById('body').style.backgroundColor = 'black';
+}
+
+//Trabalhando com eventos do teclado
+
+function apertouTecla(event){
+	console.log("Apertou alguma tecla: "+event.keyCode);
+
+	if(event.shiftKey == true){
+		console.log("Apertou alguma tecla com Shift...");
+	}
+
+	if(event.shiftKey == true && event.keyCode == 69){
+		console.log("Apertou  tecla Shift+E  ...");
+	}
 }
