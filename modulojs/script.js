@@ -70,3 +70,4 @@ function verificarNome(){
 		alert("Seu nome e diferente do criador do site")
 	}
 }
+
