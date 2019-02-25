@@ -50,3 +50,10 @@ function apertouTecla(event){
 		console.log("Apertou  tecla Shift+E  ...");
 	}
 }
+
+//Trabalhando com eentos de pagina
+
+function carregou(){
+	document.getElementById('body').style.backgroundColor = 'grey';
+	alert("Pagina Carregada!");
+}

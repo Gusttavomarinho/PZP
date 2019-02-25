@@ -5,7 +5,7 @@
 	<meta charset="UTF-8"/>
 	<script type="text/javascript" src="script.js"></script>
 </head>
-<body id="body">
+<body id="body" onload="carregou()">
 	<h3>Eventos de mouse</h3><br/>
 	<button onmousedown="apertouMouse()" onmouseup="soltouMouse()" onmouseover="mouseEmCima()" onmouseout="mouseSaioDeCima()" onmousemove="MoveMouse()">EU SOU UM BOTÃO</button>
 
@@ -22,6 +22,8 @@
 	<input type="text" onkeydown="apertouTecla(event)" placeholder="onkeydown">
 	<input type="text" onkeyup="apertouTecla(event)" placeholder="onkeyup">
 	<input type="text" onkeypress="apertouTecla(event)" placeholder="onkeypress">
+	<br/><br/>
+	<h3>Eventos de pagina</h3><br/>
 
 </body>
 </html>
