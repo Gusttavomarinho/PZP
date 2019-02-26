@@ -55,7 +55,24 @@ function apertouTecla(event){
 
 function carregou(){
 	document.getElementById('body').style.backgroundColor = 'grey';
-	alert("Pagina Carregada!");
+	
 }
 
 //http://keycode.info/ -< site que mostra codigos das teclas
+
+
+//Trabalhando com evento de formulario
+
+function mudouOpcao(objeto){
+
+	console.log("Selecionou: "+objeto.value);
+
+}
+
+function focou(){
+	console.log('Focou no campo 1');
+}
+
+function desfocou(){
+	console.log('desfocou no campo 1');
+}
