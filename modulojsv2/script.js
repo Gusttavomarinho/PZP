@@ -76,3 +76,17 @@ function focou(){
 function desfocou(){
 	console.log('desfocou no campo 1');
 }
+
+//validando formulario
+function validar(){
+
+	var valor = document.getElementById("numero").value;
+
+	if(valor.length > 2){
+		alert("Numero maior que 2 algarismos");
+		return false;
+
+	}else {
+		return true;
+	}
+}
