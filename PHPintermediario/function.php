@@ -35,6 +35,26 @@ echo "A data e hora atual é: ".$dataatual."<br/>";
 
 $dataproxima = date("d/m/Y", strtotime("+10 days"));
 
-echo "A data daqui a 10 dias é: ".$dataproxima."<br/>";
+echo "A data daqui a 10 dias é: ".$dataproxima."<br/><br/>";
 
+//funções matematicas do PHP
+
+//abs
+echo "função matematica no PHP ABS:".abs(10)."<br/>";
+//round
+echo "função matematica no PHP ROUND:".round(3.2)."<br/>";
+//ceil
+echo "função matematica no PHP CEIL:".ceil(2.2)."<br/>";
+//floor
+echo "função matematica no PHP FLOOR:".floor(2.2)."<br/>";
+//rand
+echo "função matematica no PHP RAND:".rand(1,100)."<br/>";
+
+//sistema de sorteio basico usando o rand
+
+$pessoas =  array("Gustavo","Fulano","Maria","Seiila");
+// de 0 a 3 pois o meu array tem 4 itens que o indice vai de 0 a 3 
+$numero_alteatorio = rand(0,3);
+
+echo "O sorteado é: ".$pessoas[$numero_alteatorio]."<br/>";
 ?>
