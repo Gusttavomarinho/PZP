@@ -57,4 +57,20 @@ $pessoas =  array("Gustavo","Fulano","Maria","Seiila");
 $numero_alteatorio = rand(0,3);
 
 echo "O sorteado é: ".$pessoas[$numero_alteatorio]."<br/>";
+
+//funções do PHP para manipulação de string
+//http://php.net/explode
+//http://php.net/manual/pt_BR/function.implode.php
+//http://php.net/number_format
+//http://php.net/str_replace
+//http://php.net/manual/pt_BR/function.strtolower.php
+//http://php.net/manual/pt_BR/function.strtoupper.php
+//http://php.net/manual/pt_BR/function.substr.php
+//http://php.net/manual/pt_BR/function.ucfirst.php
+//http://php.net/manual/pt_BR/function.ucwords.php
+$nome = "Gustavo Marinho";
+
+$x = explode(" ",$nome);
+
+print_r($x);
 ?>
