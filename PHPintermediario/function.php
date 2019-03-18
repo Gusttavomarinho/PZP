@@ -73,4 +73,25 @@ $nome = "Gustavo Marinho";
 $x = explode(" ",$nome);
 
 print_r($x);
+
+echo "<br/>"."<h3>Manipulação de array</h3>"."<br/>";
+//manipulação de arrays 
+
+$pessoa_array = ["nome" => "Chico",
+				"idade" => 90,
+				"cidade" => "Campina Grande",
+				"pais" => "Brasil"
+];
+
+$pessoa_array2 =  array_keys($pessoa_array);
+$pessoa_array3 = array_values($pessoa_array);
+print_r($pessoa_array2);
+echo "<br/>";
+print_r($pessoa_array3);
+echo "<br/>";
+asort($pessoa_array); //ordena em ordem alfabetica
+echo "<br/>";
+//array_pop - remove sempre o ultimo item do array
+//array_shift - remove sempre o primeiro item do array
+
 ?>
