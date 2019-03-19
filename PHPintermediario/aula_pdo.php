@@ -22,6 +22,8 @@ try {
             echo "Email: ".$usuario["email"]."<br/>";
             echo "Senha: ".$usuario["senha"]."<br/>";
         }
+        //listar totais de registro no BD
+        echo "<br/>"."Total de registros: ".$sql->rowCount()."<br/>";
         //inserindo usuarios no banco de dedados
         /*
         $nome = "TESTE";
@@ -41,6 +43,6 @@ try {
 
 } catch(PDOException $e){
 
-	echo "Falhou: ".$e->getMessage();
+    echo "Falhou: ".$e->getMessage();
 }
 ?>
