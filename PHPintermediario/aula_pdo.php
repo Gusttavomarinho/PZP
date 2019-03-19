@@ -33,12 +33,22 @@ try {
         $sql= $pdo->query($sql);
         echo "Usuario inserido: ".$pdo->lastInsertId(); */
 
+        //atualizando usuarios no banco de dedados
+        /*
+        $id = 7;
+        $nome = "TESTE ATUALIZADO";
+        $email = "atualizado@hotmail.com.br";
+        $senha = md5("atualizado@16.564");
+        $sql = "UPDATE  usuarios SET nome='$nome',email='$email',senha='$senha' WHERE id=$id";
+        $sql= $pdo->query($sql);
+        echo "Usuario atualizado (ID): ".$usuario["id"];*/
+
         /*o codigo acima esta comentado pois e exemplos da aula de como inserir dados se deixa descomentado
         //toda vida que eu acessar a pagina vai esta inserindo algum registro */
 
 
     }else {
-        echo "Não a registro de ususarios!";
+        echo "Não a registro de usuarios!";
     }
 
 } catch(PDOException $e){
