@@ -5,9 +5,13 @@ $dbuser = "root";
 $dbpass = "";
 
 try {
+    // precisa de 3 parametros para conectar
 	$pdo = new PDO($dsn,$dbuser,$dbpass);
+
 	echo "conexão estabelecida com sucesso!";
+
 } catch(PDOException $e){
+
 	echo "Falhou: ".$e->getMessage();
 }
 ?>
