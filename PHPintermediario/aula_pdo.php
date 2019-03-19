@@ -31,6 +31,9 @@ try {
         $sql= $pdo->query($sql);
         echo "Usuario inserido: ".$pdo->lastInsertId(); */
 
+        /*o codigo acima esta comentado pois e exemplos da aula de como inserir dados se deixa descomentado
+        //toda vida que eu acessar a pagina vai esta inserindo algum registro */
+
 
     }else {
         echo "Não a registro de ususarios!";
