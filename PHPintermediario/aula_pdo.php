@@ -8,7 +8,23 @@ try {
     // precisa de 3 parametros para conectar
 	$pdo = new PDO($dsn,$dbuser,$dbpass);
 
-	echo "conexão estabelecida com sucesso!";
+	//buscando os registros de ususarios
+	$sql = "SELECT * FROM usuarios";
+	$sql = $pdo->query($sql);
+
+    //verificando se veio algum registro
+    if($sql->rowCount() > 0){
+        //echo "Tem usuarios sim."."<br/>";
+
+        foreach ($sql->fetchAll() as $usuario){
+            echo "Nome: ".$usuario["nome"]."<br/>";
+            echo "Email: ".$usuario["email"]."<br/>";
+            echo "Senha: ".$usuario["senha"]."<br/>";
+        }
+
+    }else {
+        echo "Não a registro de ususarios!";
+    }
 
 } catch(PDOException $e){
 
