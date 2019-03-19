@@ -16,11 +16,19 @@ try {
     if($sql->rowCount() > 0){
         //echo "Tem usuarios sim."."<br/>";
 
+        //listando ususarios no banco de dados
         foreach ($sql->fetchAll() as $usuario){
             echo "Nome: ".$usuario["nome"]."<br/>";
             echo "Email: ".$usuario["email"]."<br/>";
             echo "Senha: ".$usuario["senha"]."<br/>";
         }
+        //inserindo usuarios no banco de dedados
+        /*
+        $nome = "Testador2";
+        $email = "teste@hotmail.com.br";
+        $senha = md5("1234");
+        $sql = "INSERT INTO usuarios SET nome='$nome',email='$email',senha='$senha'";
+        $sql= $pdo->query($sql);*/
 
     }else {
         echo "Não a registro de ususarios!";
