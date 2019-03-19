@@ -24,11 +24,13 @@ try {
         }
         //inserindo usuarios no banco de dedados
         /*
-        $nome = "Testador2";
-        $email = "teste@hotmail.com.br";
-        $senha = md5("1234");
+        $nome = "TESTE";
+        $email = "fdofkodkfd@hotmail.com.br";
+        $senha = md5("1234@5456465");
         $sql = "INSERT INTO usuarios SET nome='$nome',email='$email',senha='$senha'";
-        $sql= $pdo->query($sql);*/
+        $sql= $pdo->query($sql);
+        echo "Usuario inserido: ".$pdo->lastInsertId(); */
+
 
     }else {
         echo "Não a registro de ususarios!";
