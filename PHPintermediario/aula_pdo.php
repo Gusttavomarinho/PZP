@@ -43,6 +43,13 @@ try {
         $sql= $pdo->query($sql);
         echo "Usuario atualizado (ID): ".$usuario["id"];*/
 
+        //deletando usuario
+        /*
+        $id = 4;
+        $sql = "DELETE FROM usuarios WHERE id=$id";
+        $sql= $pdo->query($sql);
+        echo "Usuario Deletado (ID): ".$usuario["id"]; */
+
         /*o codigo acima esta comentado pois e exemplos da aula de como inserir dados se deixa descomentado
         //toda vida que eu acessar a pagina vai esta inserindo algum registro */
 
