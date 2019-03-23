@@ -17,13 +17,19 @@ if(isset($_POST['nome']) && empty($_POST['nome']) == false ){
     header("Location: index.php");
 }
 ?>
-<form method="POST">
-    Nome:<br/>
-    <input type="text" name="nome" placeholder="Digite seu nome"/><br/><br/>
-    E-mail:<br/>
-    <input type="text" name="email" placeholder="Digite seu email"/><br/><br/>
-    Senha:<br/>
-    <input type="password" name="senha" placeholder="Digite sua senha"/><br/><br/>
+<form method="POST" class="form">
+    <div class="form-group">
+        <label for="form-nome">Nome</label>
+        <input type="text" class="form-control" id="form-nome"  placeholder="Digite seu nome" name="nome">
+    </div>
+    <div class="form-group">
+        <label for="form-email">E-mail</label>
+        <input type="email" class="form-control" id="form-email"  placeholder="Digite seu e-mail" name="email">
+    </div>
+    <div class="form-group">
+        <label for="form-senha">Senha</label>
+        <input type="password" class="form-control" id="form-senha"  placeholder="Digite sua senha" name="senha">
+    </div>
 
-    <input type="submit" value="Cadastrar"/><br/><br/>
+    <input type="submit" value="Cadastrar" class="btn btn-success"/><br/><br/>
 </form>

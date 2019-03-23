@@ -36,12 +36,18 @@ $sql->execute();
 
 ?>
 <form method="POST">
-    Nome:<br/>
-    <input type="text" name="nome" value="<?php echo $dado['nome']; ?>"/><br/><br/>
-    E-mail:<br/>
-    <input type="text" name="email" value="<?php echo $dado['email']; ?>"/><br/><br/>
-    Senha:<br/>
-    <input type="password" name="senha" disabled value=""/><br/><br/>
+    <form method="POST" class="form">
+        <div class="form-group">
+            <label for="form-nome">Nome</label>
+            <input type="text" class="form-control" id="form-nome"  placeholder="Digite seu nome" name="nome" value="<?php echo $dado['nome']; ?>">
+        </div>
+        <div class="form-group">
+            <label for="form-email">E-mail</label>
+            <input type="email" class="form-control" id="form-email"  placeholder="Digite seu e-mail" name="email" value="<?php echo $dado['email']; ?>">
+        </div>
+        <input type="submit" value="Editar" class="btn btn-warning"/><br/><br/>
+    </form>
 
-    <input type="submit" value="Cadastrar"/><br/><br/>
+
+
 </form>
