@@ -11,6 +11,10 @@
         <div class="row">
             <h3>Campeonato Brasileiro - Serie A</h3>
         </div>
+        <div>
+            {{ time.nome }}
+            <img :src="time.escudo" alt="">
+        </div>
         <!-- quando coloco os : pontos eu ligo o value ao data   Data Binding -- Programação ao HYML  -->
         <input type="text" :id="gols+'id'" v-model="gols">{{gols}}
         <button class="btn btn-primary" @click="showAlert">Fim de Jogo</button>
@@ -32,7 +36,7 @@
     new Vue({
         el: "#app",
         data: {
-            gols: '3'
+            gols: '3',
             time: new Time('Atletico Mineiro','assets/atletico_mg_60x60.png')
         },
         methods: {
