@@ -12,9 +12,33 @@
             <h3>Campeonato Brasileiro - Serie A</h3>
         </div>
         <div>
-            {{ time.nome }}
-            <img :src="time.escudo" alt="">
+            {{ times[18].nome }}
+            <img :src="times[18].escudo" alt="">
         </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>Nome</td>
+                    <td>Pontos</td>
+                    <td>GM</td>
+                    <td>GS</td>
+                    <td>Saldo</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="time in times">
+                    <td>
+                        <img :src="time.escudo" alt="">
+                        {{ time.nome }}
+                    </td>
+                    <td>{{time.pontos}}</td>
+                    <td>{{time.gm}}</td>
+                    <td>{{time.gs}}</td>
+                    <td></td>
+                </tr>
+
+            </tbody>
+        </table>
         <!-- quando coloco os : pontos eu ligo o value ao data   Data Binding -- Programação ao HYML  -->
         <input type="text" :id="gols+'id'" v-model="gols">{{gols}}
         <button class="btn btn-primary" @click="showAlert">Fim de Jogo</button>
@@ -27,6 +51,11 @@
         constructor(nome, escudo){
             this.nome = nome;
             this.escudo = escudo;
+
+            this.pontos = 0;
+            this.gm = 0;
+            this.gs = 0;
+
         }
 
     }
@@ -37,7 +66,28 @@
         el: "#app",
         data: {
             gols: '3',
-            time: new Time('Atletico Mineiro','assets/atletico_mg_60x60.png')
+            times: [
+                new Time('palmeiras', 'assets/palmeiras_60x60.png'),
+                new Time('Internacional', 'assets/internacional_60x60.png'),
+                new Time('Flamengo', 'assets/flamengo_60x60.png'),
+                new Time('Atlético-MG', 'assets/atletico_mg_60x60.png'),
+                new Time('Santos', 'assets/santos_60x60.png'),
+                new Time('Botafogo', 'assets/botafogo_60x60.png'),
+                new Time('Atlético-PR', 'assets/atletico-pr_60x60.png'),
+                new Time('Corinthians', 'assets/corinthians_60x60.png'),
+                new Time('Grêmio', 'assets/gremio_60x60.png'),
+                new Time('Fluminense', 'assets/fluminense_60x60.png'),
+                new Time('Bahia', 'assets/bahia_60x60.png'),
+                new Time('Chapecoense', 'assets/chapecoense_60x60.png'),
+                new Time('São Paulo', 'assets/sao_paulo_60x60.png'),
+                new Time('Cruzeiro', 'assets/cruzeiro_60x60.png'),
+                new Time('Sport', 'assets/sport_60x60.png'),
+                new Time('Ceará', 'assets/ceara_60x60.png'),
+                new Time('Vitória', 'assets/vitoria_60x60.png'),
+                new Time('Vasco', 'assets/vasco_60x60.png'),
+                new Time('América-MG', 'assets/america_mg_60x60.png'),
+                new Time('Paraná', 'assets/parana_60x60.png'),
+            ] 
         },
         methods: {
             showAlert(){
