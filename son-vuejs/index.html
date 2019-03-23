@@ -12,17 +12,28 @@
             <h3>Campeonato Brasileiro - Serie A</h3>
         </div>
         <!-- quando coloco os : pontos eu ligo o value ao data   Data Binding -- Programação ao HYML  -->
-        <input type="text" :value="gols" :id="gols+'id'" @input="pegarValor($event)">
+        <input type="text" :id="gols+'id'" v-model="gols">{{gols}}
         <button class="btn btn-primary" @click="showAlert">Fim de Jogo</button>
 </div>
 <!-- development version, includes helpful console warnings -->
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 <script>
+    class Time{
+        constructor(nome, escudo){
+            this.nome = nome;
+            this.escudo = escudo;
+        }
+
+    }
+
+
+
     new Vue({
         el: "#app",
         data: {
-            gols : '3'
+            gols: '3'
+            time: new Time('Atletico Mineiro','assets/atletico_mg_60x60.png')
         },
         methods: {
             showAlert(){
