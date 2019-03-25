@@ -9,7 +9,7 @@ if(isset($_COOKIE['logado']) && empty($_COOKIE['logado']) == false){
 }
 
 if(isset($_SESSION['id']) && empty($_SESSION['id'] == false)){
-    echo "Area restrita...";
+    echo "Area restrita... ...";
 
 }else {
     header("Location: login.php");
