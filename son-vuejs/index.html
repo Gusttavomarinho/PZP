@@ -11,6 +11,17 @@
         <div class="row">
             <h3>Campeonato Brasileiro - Serie A</h3>
         </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button class="btn btn-primary" @click="criarNovoJogo">Novo Jogo!</button>
+            </div>
+        </div>
+    <!-- quando coloco os : pontos eu ligo o value ao data   Data Binding -- Programação ao HYML  -->
+        <input type="text" class="form-control" v-model="novoJogo.casa.gols">
+        {{novoJogo.casa.time ? novoJogo.casa.time.nome: ''}}
+        <input type="text" class="form-control" v-model="novoJogo.fora.gols">
+        {{novoJogo.fora.time ? novoJogo.fora.time.nome: ''}}
+        <button class="btn btn-primary" @click="showAlert">Fim de Jogo</button>
         <!--<div>
             {{ times[18].nome }}
             <img :src="times[18].escudo" alt="">
@@ -39,9 +50,7 @@
 
             </tbody>
         </table>
-        <!-- quando coloco os : pontos eu ligo o value ao data   Data Binding -- Programação ao HYML  -->
-        <input type="text" :id="gols+'id'" v-model="gols">{{gols}}
-        <button class="btn btn-primary" @click="showAlert">Fim de Jogo</button>
+
 </div>
 <!-- development version, includes helpful console warnings -->
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -87,7 +96,18 @@
                 new Time('Vasco', 'assets/vasco_60x60.png'),
                 new Time('América-MG', 'assets/america_mg_60x60.png'),
                 new Time('Paraná', 'assets/parana_60x60.png'),
-            ] 
+            ],
+            novoJogo: {
+                casa: {
+                    time: null,
+                    gols: 0
+                },
+                fora: {
+                    time: null,
+                    gols: 0
+
+                }
+            }
         },
         methods: {
             showAlert(){
@@ -95,6 +115,16 @@
             },
             pegarValor($event){
                 console.log($event)
+            },
+            criarNovoJogo() {
+                var indiceCasa = Math.floor(Math.random() * 20);
+                var indiceFora = Math.floor(Math.random() * 20);
+
+                this.novoJogo.casa.time = this.times[indiceCasa];
+                this.novoJogo.casa.gols = 0;
+                this.novoJogo.fora.time = this.times[indiceFora];
+                this.novoJogo.fora.gols = 0;
+                console.log(this.novoJogo);
             }
         }
     })
