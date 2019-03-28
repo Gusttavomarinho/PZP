@@ -12,7 +12,7 @@
 $dsn = "mysql:dbname=pzp_blog;host=localhost";
 
 $dbuser = "root";
-$dbpass = "";
+$dbpass = "root";
 
 try {
 
