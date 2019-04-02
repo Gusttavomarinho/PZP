@@ -34,7 +34,7 @@ if(isset($_POST['nome']) && empty($_POST['nome']) == false)
     </form>
 </div>
 <?php
-$sql = "SELECT * FROM comentarios";
+$sql = "SELECT * FROM comentarios ORDER BY created DESC";
 $sql = $pdo->query($sql);
 
 if($sql->rowCount() > 0)
