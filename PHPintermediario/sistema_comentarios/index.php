@@ -27,7 +27,7 @@ if(isset($_POST['nome']) && empty($_POST['nome']) == false)
             <input type="text" class="form-control" id="form-nome"  placeholder="Digite seu nome" name="nome">
         </div>
         <div class="form-group">
-            <label for="form-mensagem">Mensagem curtas</label>
+            <label for="form-mensagem">Mensagem curta</label>
             <textarea class="form-control" id="form-mensagem" rows="3" name="mensagem"></textarea>
         </div>
         <input type="submit" value="Cadastrar" class="btn btn-success"/><br/><br/>
@@ -42,7 +42,7 @@ if($sql->rowCount() > 0)
     foreach($sql->fetchAll() as $comentario)
     {  
         echo '<div class="jumbotron">';
-        echo '<h1 class="display-4">'.$comentario['nome'].'</h1>';
+        echo '<h1 class="display-10">'.$comentario['nome'].'</h1>';
         echo '<p class="lead">'.$comentario['mensagem'].'</p>';
         echo '<hr class="my-4">';
         echo '<p>Criado em: '.$comentario['created'].'</p>';
