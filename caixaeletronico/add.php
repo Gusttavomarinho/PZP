@@ -47,17 +47,6 @@ if(isset($_POST['tipo'])){
 </head>
 <body>
 <div class="container container-fluid">
-    <!--<form method="POST">
-        Tipo de Transação:<br/>
-        <select name="tipo">
-            <option value="0">Deposito</option>
-            <option value="1">Saque</option>
-        </select><br/><br/>
-        Valor:<br/>
-        <input type="text" name="valor" pattern="[0-9.,]{1,}"/><br/><br/>
-
-        <input type="submit" value="Adicionar"/>
-    </form>-->
     <form method="POST">
         <div class="form-group">
             <label for="label_tipo">Tipo de operação</label>
@@ -68,7 +57,7 @@ if(isset($_POST['tipo'])){
         </div>
         <div class="form-group">
             <label for="label_valor">Valor</label>
-            <input type="text" class="form-control" id="label_valor" pattern="[0-9.,]{1,}" name="valor"/>
+            <input type="text" class="form-control" id="label_valor" pattern="[0-9.,]{1,}" name="valor" placeholder="0000.00"/>
         </div>
         <input class="btn btn-success" type="submit" value="Adicionar"/>
     </form>
