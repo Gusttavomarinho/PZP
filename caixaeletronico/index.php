@@ -35,27 +35,41 @@ if(isset($_SESSION['banco']) && empty($_SESSION['banco']) == false){
             Titular: <?php echo $dado['titular']; ?><br/>
             Agencia: <?php echo $dado['agencia']; ?><br/>
             Conta: <?php echo $dado['conta']; ?><br/>
-            Saldo: <?php echo $dado['saldo']; ?><br/>
+            Saldo: <?php echo 'R$'. number_format($dado['saldo'],2); ?><br/>
             <a href="sair.php">Sair</a>
+            <hr/>
+            <h3>Movimentação/Extrato</h3>
+            <a href="add.php">Adicionar Transação</a><br/>
             <table border="0" width="100%" class="table">
                 <tr>
-                    <th scope="col">ID_CONTA</th>
-                    <th scope="col">TIPO</th>
+                    <th scope="col">DATA</th>
                     <th scope="col">VALOR</th>
-                    <th scope="col">DATA OPERAÇÃO</th>
+                    <th scope="col">TIPO</th>
                 </tr>
                 <?php
-                $sql = $pdo->prepare("SELECT * FROM historico WHERE id = :id");
+                $sql = $pdo->prepare("SELECT * FROM historico WHERE id_conta = :id");
                 $sql->bindValue(":id",$id);
                 $sql->execute();
 
                 if($sql->rowCount() > 0){
                     foreach ($sql->fetchAll() as $movimentacao){
+
+                        //formatando o tipo de operação
+                        if($movimentacao['tipo'] == 0){
+                            $tipo_operacao = 'DEPOSITO';
+                            $font_color = 'green';
+
+                        }else{
+                            $tipo_operacao = 'SAQUE';
+                            $font_color = 'red';
+
+                        }
+
+                        //listando na tabela
                         echo '<tr>';
-                        echo '<td>'.$movimentacao['id_conta'].'</td>';
-                        echo '<td>'.$movimentacao['tipo'].'</td>';
-                        echo '<td>'.$movimentacao['valor'].'</td>';
-                        echo '<td>'.$movimentacao['data_operacao'].'</td>';
+                        echo '<td>'.date('d/m/Y H:i', strtotime($movimentacao['data_operacao'])).'</td>';
+                        echo '<td style=color:'.$font_color.'>'.'R$'.number_format($movimentacao['valor'],2).'</td>';
+                        echo '<td>'.$tipo_operacao.'</td>';
                         echo '</tr>';
                     }
                 }
