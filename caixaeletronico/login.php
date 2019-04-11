@@ -32,20 +32,25 @@ if(isset($_POST['agencia']) && !empty($_POST['agencia'])){
     <title>Caixa Eletronico</title>
 </head>
 <body>
+    <div class="container container-fluid">
         <form method="POST">
-            Agencia:<br/>
-            <input type="text" name="agencia" /><br/><br/>
-
-            Conta:<br/>
-            <input type="text" name="conta" /><br/><br/>
-
-            Senha:<br/>
-            <input type="password" name="senha" /><br/><br/>
-
-            <input type="submit" value="Entrar"/>
+            <div class="form-group">
+                <label for="label_agencia">Agencia</label>
+                <input type="text" class="form-control" id="label_agencia" name="agencia" placeholder="0000"/>
+            </div>
+            <div class="form-group">
+                <label for="label_conta">Conta</label>
+                <input type="text" class="form-control" id="label_conta" name="conta" placeholder="0000"/>
+            </div>
+            <div class="form-group">
+                <label for="label_senha">Senha</label>
+                <input type="password" class="form-control" id="label_senha" name="senha" placeholder="Digite sua senha"/>
+            </div>
+            <input class="btn btn-dark" type="submit" value="Entrar"/>
 
 
         </form>
+    </div>
 
 </body>
 </html>
