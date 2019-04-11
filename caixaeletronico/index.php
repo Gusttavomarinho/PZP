@@ -31,15 +31,16 @@ if(isset($_SESSION['banco']) && empty($_SESSION['banco']) == false){
         <title>Caixa Eletronico</title>
     </head>
     <body>
+    <div class="container container-fluid">
             <h1>Banco GHMO</h1>
             Titular: <?php echo $dado['titular']; ?><br/>
             Agencia: <?php echo $dado['agencia']; ?><br/>
             Conta: <?php echo $dado['conta']; ?><br/>
             Saldo: <?php echo 'R$'. number_format($dado['saldo'],2); ?><br/>
-            <a href="sair.php">Sair</a>
+            <a href="sair.php" class="btn btn-danger">Sair</a>
             <hr/>
             <h3>Movimentação/Extrato</h3>
-            <a href="add.php">Adicionar Transação</a><br/>
+            <a href="add.php" class="btn btn-primary">Adicionar Transação</a><br/><br/>
             <table border="0" width="100%" class="table">
                 <tr>
                     <th scope="col">DATA</th>
@@ -75,5 +76,6 @@ if(isset($_SESSION['banco']) && empty($_SESSION['banco']) == false){
                 }
                 ?>
             </table>
+    </div>
     </body>
 </html>
