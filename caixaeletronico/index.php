@@ -32,7 +32,7 @@ if(isset($_SESSION['banco']) && empty($_SESSION['banco']) == false){
     </head>
     <body>
     <div class="container container-fluid">
-            <h1>Banco GHMO</h1>
+            <h1>Banco GM</h1>
             Titular: <?php echo $dado['titular']; ?><br/>
             Agencia: <?php echo $dado['agencia']; ?><br/>
             Conta: <?php echo $dado['conta']; ?><br/>
