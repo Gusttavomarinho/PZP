@@ -80,4 +80,6 @@ echo "POST 1: {$post1->getLikes()} likes -- {$post1->getAuthor()} "."<br/>";
 
 echo "POST 2: {$post2->getLikes()} likes -- {$post2->getAuthor()} "."<br/>";
 
+/** testando o git */
+
   ?>
