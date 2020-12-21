@@ -7,7 +7,12 @@ class Post {
     public array $comments = []; //isso sao as propiedades { caracteristicas }
     public string $author;
 
+    public function __construct($qtLikes = 0){
+       $this->likes = $qtLikes;
+    }
+
     public function increaseLike(){
+        echo 'abc';
         $this->likes++;
     }
 
@@ -19,6 +24,7 @@ class Post {
 
 //criando o objeto
 
+/*
 $post1 = new Post();
 $post1->likes = 7;
 $post1->increaseLike();
@@ -29,6 +35,14 @@ $post2->decreaseLike();
 
 $post3 = new Post();
 //$post3->likes = 'Gustavo'; // testando o Typed Properties do PHP 7.4
+
+echo "POST 1: {$post1->likes} "."<br/>";
+
+echo "POST 2: {$post2->likes} "."<br/>"; */
+
+$post1 = new Post(25);
+
+$post2 = new Post(15);
 
 echo "POST 1: {$post1->likes} "."<br/>";
 
