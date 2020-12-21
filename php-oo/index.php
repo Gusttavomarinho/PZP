@@ -3,12 +3,12 @@
 //revisando o php OO
 //criando a class
 class Post {
-    public int $likes = 0;
+    private int $likes = 0;
     public array $comments = []; //isso sao as propiedades { caracteristicas }
-    public string $author;
+    private string $author;
 
     public function __construct($qtLikes = 0){
-       $this->likes = $qtLikes;
+       $this->likes = $qtLikes * 2;
     }
 
     public function increaseLike(){
@@ -19,6 +19,36 @@ class Post {
     public function decreaseLike(){
         $this->likes--;
     }
+
+    //get e set metodos
+    public function setAuthor($n){
+        if(strlen($n) >= 3){
+            $this->author = ucfirst($n); 
+        }
+        
+    }
+
+    public function getAuthor(){
+        return $this->author ?? 'Visitante';
+    }
+
+    public function setLikes($a){
+        $this->likes = $a;
+    }
+
+    public function getLikes(){
+        return $this->likes;
+    }
+
+    public function setComments($a){
+        $this->comments = $a;
+    }
+
+    public function getComments(){
+        return $this->comments;
+    }
+
+
 }
 
 
@@ -41,11 +71,13 @@ echo "POST 1: {$post1->likes} "."<br/>";
 echo "POST 2: {$post2->likes} "."<br/>"; */
 
 $post1 = new Post(25);
+$post1->setAuthor('gustavo');
 
 $post2 = new Post(15);
+$post2->setAuthor('fulano');
 
-echo "POST 1: {$post1->likes} "."<br/>";
+echo "POST 1: {$post1->getLikes()} likes -- {$post1->getAuthor()} "."<br/>";
 
-echo "POST 2: {$post2->likes} "."<br/>";
+echo "POST 2: {$post2->getLikes()} likes -- {$post2->getAuthor()} "."<br/>";
 
   ?>
