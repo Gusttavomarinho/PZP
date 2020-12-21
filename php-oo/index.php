@@ -74,7 +74,7 @@ $post1 = new Post(25);
 $post1->setAuthor('gustavo');
 
 $post2 = new Post(15);
-$post2->setAuthor('fulano');
+$post2->setAuthor('fulano beltrano');
 
 echo "POST 1: {$post1->getLikes()} likes -- {$post1->getAuthor()} "."<br/>";
 
