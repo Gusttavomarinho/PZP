@@ -27,5 +27,5 @@ $log->error('Bar');
     *"psr-4": {
      * "classes\\": "classes/"
     *}
-    
+    * comentarios *
  */
