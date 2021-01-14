@@ -2,7 +2,9 @@
 
 require 'autoload.php';
 
-$m = new Matematica();
-echo $m->somar(10,20);
+//usando o namespace
 
-$a = new Algo();
+use \mateica\Basica;
+
+$m = new Basica();
+echo $m->somar(10,20);

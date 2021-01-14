@@ -1,8 +1,14 @@
 <?php
 spl_autoload_register(function($class){
-  if(file_exists('classes/'.$class.'.php')){
+  $baseDir = __DIR__.'/classes/';
+  
+  //invertendo as barras para poder achar os arquivos
+  $file = $baseDir.str_replace('\\','/', $class).'.php';
 
-    require 'classes/'.$class.'.php';
+  if(file_exists($file)){
+
+    require $file;
 
   }
+
 });
