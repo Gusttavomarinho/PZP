@@ -28,7 +28,7 @@ if($sql->rowCount() > 0){
       <td><?=$usuario['email']; ?></td>
       <td>
           <a href="update.php?id=<?=$usuario['id']; ?>"> [ Editar ]</a>
-          <a href="delete.php?id=<?=$usuario['id']; ?>"> [ Excluir ]</a>
+          <a href="delete.php?id=<?=$usuario['id']; ?>" onclick=" return confirm('Tem certeza que deseja excluir ?')"> [ Excluir ]</a>
       </td>
   </tr>
 
