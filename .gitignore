@@ -2,3 +2,5 @@
 *.sql
 .idea/
 .vscode/
+PHP1/vendor
+*.lock
