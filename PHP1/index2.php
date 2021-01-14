@@ -7,7 +7,7 @@ $sql = $pdo->query('SELECT * FROM usuarios');
 
 echo "TOTAL DE REGISTROS: ".$sql->rowCount();
 
-$dados = $sql->fetchAll( PDO::FETCH_ASSOC);
+$dados = $sql->fetchAll( PDO::FETCH_ASSOC); //comando PDO::FETCH_ASSOC serve para nao duplicar o array
 
 echo '<pre>';
 print_r($dados);
