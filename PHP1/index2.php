@@ -11,3 +11,8 @@ $dados = $sql->fetchAll( PDO::FETCH_ASSOC); //comando PDO::FETCH_ASSOC serve par
 
 echo '<pre>';
 print_r($dados);
+
+echo '<br/>';
+
+
+
