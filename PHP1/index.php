@@ -8,7 +8,7 @@ use Monolog\Handler\StreamHandler;
 
 // create a log channel
 $log = new Logger('name');
-$log->pushHandler(new StreamHandler('teste.log', Logger::WARNING));
+$log->pushHandler(new StreamHandler('teste2.log', Logger::WARNING));
 
 $m = new Basica();
 echo $m->somar(10,10);
