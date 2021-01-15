@@ -4,3 +4,4 @@
 .vscode/
 PHP1/vendor
 *.lock
+!PHP1/sql_testes
